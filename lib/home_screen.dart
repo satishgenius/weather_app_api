@@ -49,7 +49,7 @@ class _HomeScreen extends State<HomeScreen> {
                     color: Colors.grey),
                     child: Column(
                       children: [
-                        Image.network(_response.iconUrl),
+                        Image.network(_response.iconUrl,color: Colors.black87,),
                         Text(
                           '${_response.tempInfo.temperature}°',
                           style: TextStyle(fontSize: 40),
@@ -113,12 +113,12 @@ class checkInternet{
     listener = DataConnectionChecker().onStatusChange.listen((status) {
       switch (status){
         case DataConnectionStatus.connected:
-          InternetStatus = "Connected to the Internet";
+          InternetStatus = " Wow!! Connected";
           contentmessage = "Connected to the Internet";
           _showDialog(InternetStatus,contentmessage,context);
           break;
         case DataConnectionStatus.disconnected:
-          InternetStatus = "You are disconnected to the Internet. ";
+          InternetStatus = "Oops!! disconnected to the Internet. ";
           contentmessage = "Please check your internet connection";
           _showDialog(InternetStatus,contentmessage,context);
           break;
