@@ -25,7 +25,8 @@ dependencies:
     sdk: flutter
   get: ^4.6.1
   data_connection_checker: ^0.3.4
-
+  firebase_core: ^1.10.0
+  firebase_messaging: ^11.1.0
   http: ^0.12.2
 
 

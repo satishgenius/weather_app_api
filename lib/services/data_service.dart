@@ -1,5 +1,5 @@
 import 'dart:convert';
-import 'package:weather_app_api/model.dart';
+import 'package:weather_app_api/pages/model.dart';
 import 'package:http/http.dart' as http;
 
 class DataService {

@@ -1,7 +1,9 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:weather_app_api/data_service.dart';
-import 'package:weather_app_api/model.dart';
+import 'package:get/get.dart';
+import 'package:weather_app_api/pages/notifypage.dart';
+import 'package:weather_app_api/services/data_service.dart';
+import 'package:weather_app_api/pages/model.dart';
 import 'package:weather_app_api/widgets/city_textfeilds.dart';
 import 'package:data_connection_checker/data_connection_checker.dart';
 
@@ -50,7 +52,7 @@ class _HomeScreen extends State<HomeScreen> {
                     color: Colors.grey),
                     child: Column(
                       children: [
-                        Image.network(_response.iconUrl,color: Colors.black87,),
+                        Image.network(_response.iconUrl,),
                         Text(
                           '${_response.tempInfo.temperature}°',
                           style: TextStyle(fontSize: 40),
@@ -70,7 +72,9 @@ class _HomeScreen extends State<HomeScreen> {
                   ),
                 ),
 
-                ElevatedButton(onPressed: _search, child: Text('Search',),style: ElevatedButton.styleFrom(primary: Colors.grey),)
+                ElevatedButton(onPressed: _search, child: Text('Search',),style: ElevatedButton.styleFrom(primary: Colors.grey),),
+                ElevatedButton(onPressed: (){Get.to(NotifyPage());},
+                  child: Text('Notify',),style: ElevatedButton.styleFrom(primary: Colors.grey),)
               ],
             ),
           ),
