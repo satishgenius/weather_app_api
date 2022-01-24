@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:weather_app_api/pages/mydrawer.dart';
 import 'package:weather_app_api/pages/notifypage.dart';
 import 'package:weather_app_api/services/data_service.dart';
 import 'package:weather_app_api/pages/model.dart';
@@ -37,8 +38,15 @@ class _HomeScreen extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-
         home: Scaffold(
+          appBar: AppBar(
+            bottomOpacity: 0,
+              elevation: 0,
+              title:Text("WeatherApp",
+            textAlign: TextAlign.start,
+          )
+          ),
+          drawer: MyDrawer(),
           backgroundColor: Colors.blue,
           body: Center(
             child: Column(
@@ -73,8 +81,8 @@ class _HomeScreen extends State<HomeScreen> {
                 ),
 
                 ElevatedButton(onPressed: _search, child: Text('Search',),style: ElevatedButton.styleFrom(primary: Colors.grey),),
-                ElevatedButton(onPressed: (){Get.to(NotifyPage());},
-                  child: Text('Notify',),style: ElevatedButton.styleFrom(primary: Colors.grey),)
+                // ElevatedButton(onPressed: (){Get.to(NotifyPage());},
+                //   child: Text('Notification',),style: ElevatedButton.styleFrom(primary: Colors.grey),)
               ],
             ),
           ),

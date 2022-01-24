@@ -7,7 +7,7 @@ class DataService {
 ///city weather taking
     final queryParameters = {
       'q': city,
-      'appid': '98e8dfcf4ea2319b693eb4c58b2a6018',
+      'appid': '1213601c6ce2f765be09a55018655b08',
       'units': 'imperial'
     };
 ///from url taking the data from api
