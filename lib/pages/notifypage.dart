@@ -62,7 +62,7 @@ class _NotifyPageState extends State<NotifyPage> {
               ),
               Text(
                 notificationBody,
-                style: Theme.of(context).textTheme.headline6,
+                style:TextStyle(fontWeight:FontWeight.bold,fontSize: 18),
               ),
               Text(
                 notificationData,
