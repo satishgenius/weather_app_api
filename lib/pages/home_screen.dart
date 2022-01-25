@@ -1,8 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+import 'package:intl/intl.dart';
 import 'package:weather_app_api/pages/mydrawer.dart';
-import 'package:weather_app_api/pages/notifypage.dart';
 import 'package:weather_app_api/services/data_service.dart';
 import 'package:weather_app_api/pages/model.dart';
 import 'package:weather_app_api/widgets/city_textfeilds.dart';
@@ -69,6 +68,25 @@ class _HomeScreen extends State<HomeScreen> {
                       ],
                     ),
                   ),
+                Center(
+                  child:
+                  Text(
+                    DateFormat()
+                        .add_MMMMEEEEd()
+                        .format(DateTime.now()),
+                    style: Theme.of(context)
+                        .textTheme
+                        .caption
+                        .copyWith(
+                      color: Colors.white,
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                      fontFamily:
+                      'flutterfonts',
+                    ),
+                  ),
+                ),
+
                 Padding(
                   padding: EdgeInsets.symmetric(vertical: 50),
                   child: SizedBox(
@@ -86,6 +104,7 @@ class _HomeScreen extends State<HomeScreen> {
               ],
             ),
           ),
+
         ));
   }
 
@@ -101,7 +120,6 @@ class checkInternet{
   StreamSubscription<DataConnectionStatus> listener;
   var InternetStatus = "Unknown";
   var contentmessage = "Unknown";
-
   void _showDialog(String title,String content ,BuildContext context){
     showDialog(
         context: context,

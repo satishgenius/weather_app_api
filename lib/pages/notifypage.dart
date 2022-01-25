@@ -35,7 +35,8 @@ class _NotifyPageState extends State<NotifyPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return
+      Scaffold(
       drawer: MyDrawer(),
       backgroundColor: Colors.blue,
       appBar: AppBar(

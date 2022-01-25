@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:weather_app_api/pages/graphweather.dart';
 import 'package:weather_app_api/pages/home_screen.dart';
 import 'package:weather_app_api/pages/notifypage.dart';
 
@@ -36,6 +37,13 @@ class MyDrawer extends StatelessWidget {
             },
             leading: Icon(Icons.notifications),
             title: Text("Notification"),
+          ),
+          ListTile(
+            onTap: (){
+              Get.off(GraphWeather());
+            },
+            leading: Icon(Icons.lock),
+            title: Text("GraphWeather"),
           )
         ],
       ),
