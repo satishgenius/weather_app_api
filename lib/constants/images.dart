@@ -1,0 +1,1 @@
+const String splash_screen = 'assets/images/logo2.png';

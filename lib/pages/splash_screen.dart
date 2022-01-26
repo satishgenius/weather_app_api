@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:weather_app_api/constants/images.dart';
 import 'package:weather_app_api/pages/home_screen.dart';
 
 
@@ -27,7 +28,9 @@ class _SplashScreenState extends State<SplashScreen> {
         child:Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.asset('assets/images/logo2.png'),
+            Image.asset(
+              splash_screen,
+            ),
             Text('"Weather is always unrehearsed."',style: TextStyle(
                 fontFamily: 'SFProText',
                 fontSize: 19,
