@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:weather_app_api/pages/graphweather.dart';
+import 'package:weather_app_api/pages/graph_screen.dart';
 import 'package:weather_app_api/pages/home_screen.dart';
 import 'package:weather_app_api/pages/notifypage.dart';
 
@@ -40,10 +40,10 @@ class MyDrawer extends StatelessWidget {
           ),
           ListTile(
             onTap: (){
-              Get.off(GraphWeather());
+              Get.off(GraphScreen());
             },
             leading: Icon(Icons.lock),
-            title: Text("GraphWeather"),
+            title: Text("GraphScreen"),
           )
         ],
       ),
