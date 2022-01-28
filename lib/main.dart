@@ -20,6 +20,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      /// moving to nextscreen
       home: SplashScreen(),
     );
   }

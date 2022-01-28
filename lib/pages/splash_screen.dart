@@ -18,6 +18,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState(){
     super. initState();
     Timer(Duration(seconds: 3),(){
+      ///After 3 seconds it will move to home screen
       Get.off(HomeScreen());
     });
   }
